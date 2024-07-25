@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header,
+        nav {
+            text-align: center;
+            margin-top: 20px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+        }
+
+        nav a {
+            margin: 0 15px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: left;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+
+        label,
+        input,
+        textarea {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input,
+        textarea {
+            width: 300px;
+            padding: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="education.html">Education</a>
+            <a href="work.html">Work Experience</a>
+            <a href="contact.html">Contact Me</a>
+        </nav>
+        <div class="contact">
+            <h2>Contact Me</h2>
+            <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send</button>
+                <button type="reset">Clear</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
