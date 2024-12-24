@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Text Example</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+        }
+        .highlighted-text {
+            background: linear-gradient(to bottom, white 60%, blue 40%);
+            color: transparent;
+            background-clip: text;
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+            padding: 1px 70px;
+            display: inline-block;
+            position: relative;
+        }
+        .highlighted-text::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, blue 60%, white 40%);
+            z-index: -1;
+        }
+        .container {
+            text-align: center;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <span class="highlighted-text">I'm the one</span>
+    </div>
+</body>
+
+</html>
